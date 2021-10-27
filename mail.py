@@ -36,8 +36,8 @@ def pars_mail():
                 body = part.get_payload(decode=True)
                 file_name = "email_" + str(x) + ".txt"
                 output_file = open(file_name, 'w')
-                output_file.write("From: %s\nTo: %s\nDate: %s\nSubject: %s\n\nBody: \n\n%s" % (
-                    email_from, email_to, local_message_date, subject, body.decode('utf-8')))
+                output_file.write("From: %s\nTo: %s\nDate: %s\nSubject: %s\n\nBody: \n\n%s" %(
+                email_from, email_to, local_message_date, subject, body.decode('utf-8')))
                 output_file.close()
             else:
                 continue
